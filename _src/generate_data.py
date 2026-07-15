@@ -237,9 +237,13 @@ for c in temps_c:
     {random.choice(references)}
     """
 
+    slug_c = str(c).replace('.', '-')
+    if c < 0:
+        slug_c = "minus-" + str(abs(c)).replace('.', '-')
+        
     articles.append({
         "title": f"{c} Celsius to Fahrenheit Conversion",
-        "slug": f"convert-{c}-celsius-to-fahrenheit".replace('.', '-').replace('--', '-'),
+        "slug": f"convert-{slug_c}-celsius-to-fahrenheit",
         "category": get_category(c),
         "c": c,
         "f": f,
