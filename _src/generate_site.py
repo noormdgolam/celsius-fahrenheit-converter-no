@@ -116,11 +116,12 @@ def main():
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     # Add home and search and legal
     for page in ["", "search.html", "privacy-policy.html", "terms.html", "disclaimer.html", "contact.html", "about.html"]:
-        sitemap += f"  <url>\n    <loc>{site['url']}/{page}</loc>\n    <lastmod>{date_str}</lastmod>\n  </url>\n"
+        priority = "1.0" if page == "" else "0.8"
+        sitemap += f"  <url>\n    <loc>{site['url']}/{page}</loc>\n    <lastmod>{date_str}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>{priority}</priority>\n  </url>\n"
     for cat in categories:
-        sitemap += f"  <url>\n    <loc>{site['url']}/{cat['slug']}.html</loc>\n    <lastmod>{date_str}</lastmod>\n  </url>\n"
+        sitemap += f"  <url>\n    <loc>{site['url']}/{cat['slug']}.html</loc>\n    <lastmod>{date_str}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n"
     for a in articles:
-        sitemap += f"  <url>\n    <loc>{site['url']}/{a['slug']}.html</loc>\n    <lastmod>{date_str}</lastmod>\n  </url>\n"
+        sitemap += f"  <url>\n    <loc>{site['url']}/{a['slug']}.html</loc>\n    <lastmod>{date_str}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n"
     sitemap += "</urlset>"
     with open(os.path.join(ROOT_DIR, "sitemap.xml"), 'w', encoding='utf-8') as f:
         f.write(sitemap)
