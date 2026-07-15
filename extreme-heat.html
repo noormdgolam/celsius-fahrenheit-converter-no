@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extreme Heat Conversions | Celsius Fahrenheit Converter Tools</title>
+    <meta name="description" content="Browse all extreme heat conversion tables and interactive tools.">
+    
+    <!-- PWA / Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#1e1e2f">
+    
+    <!-- Canonical & SEO -->
+    <link rel="canonical" href="https://celsius-fahrenheit-converter-no.bongshai.com/extreme-heat.html">
+    <link rel="alternate" hreflang="en-us" href="https://celsius-fahrenheit-converter-no.bongshai.com/extreme-heat.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Extreme Heat Conversions | Celsius Fahrenheit Converter Tools">
+    <meta property="og:description" content="Browse all extreme heat conversion tables and interactive tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://celsius-fahrenheit-converter-no.bongshai.com/extreme-heat.html">
+    <meta property="og:image" content="https://celsius-fahrenheit-converter-no.bongshai.com/icon-512.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Extreme Heat Conversions | Celsius Fahrenheit Converter Tools">
+    <meta name="twitter:description" content="Browse all extreme heat conversion tables and interactive tools.">
+    <meta name="twitter:image" content="https://celsius-fahrenheit-converter-no.bongshai.com/icon-512.png">
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Global AdSense Zone -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-0000000000000000" crossorigin="anonymous"></script> -->
+    
+    <style>
+        :root {
+            /* Light Mode */
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --primary-color: #2563eb;
+            --secondary-color: #4f46e5;
+            --header-bg: rgba(255, 255, 255, 0.7);
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --border-color: rgba(226, 232, 240, 0.8);
+            --gradient-main: linear-gradient(135deg, #2563eb, #8b5cf6);
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.4);
+            --backdrop: blur(16px);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0b1120;
+                --text-color: #f1f5f9;
+                --primary-color: #3b82f6;
+                --secondary-color: #a855f7;
+                --header-bg: rgba(11, 17, 32, 0.75);
+                --card-bg: rgba(30, 41, 59, 0.5);
+                --border-color: rgba(51, 65, 85, 0.6);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        header {
+            background-color: var(--header-bg);
+            backdrop-filter: var(--backdrop);
+            -webkit-backdrop-filter: var(--backdrop);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.25rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.75rem;
+            letter-spacing: -0.03em;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand svg {
+            width: 36px;
+            height: 36px;
+            fill: url(#grad);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 600;
+            color: var(--text-color);
+            font-size: 1.05rem;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: var(--gradient-main);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 4rem 0;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 3rem;
+        }
+
+        @media (max-width: 900px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                display: none;
+            }
+        }
+
+        .content {
+            background: var(--card-bg);
+            backdrop-filter: var(--backdrop);
+            -webkit-backdrop-filter: var(--backdrop);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-main);
+            opacity: 0.8;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sticky-widget {
+            position: sticky;
+            top: 100px;
+            background: var(--card-bg);
+            backdrop-filter: var(--backdrop);
+            -webkit-backdrop-filter: var(--backdrop);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .sticky-widget:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .ad-zone {
+            background: rgba(150, 150, 150, 0.05);
+            border: 1px dashed var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 0.875rem;
+            border-radius: var(--radius-md);
+            margin: 2rem 0;
+            overflow: hidden;
+            transition: background 0.3s ease;
+        }
+        
+        .ad-zone:hover {
+            background: rgba(150, 150, 150, 0.1);
+        }
+        
+        .ad-zone.leaderboard { height: 90px; width: 100%; }
+        .ad-zone.skyscraper { width: 100%; height: 600px; margin: 0; }
+        .ad-zone.rectangle { height: 250px; width: 100%; }
+
+        footer {
+            background: var(--header-bg);
+            backdrop-filter: var(--backdrop);
+            -webkit-backdrop-filter: var(--backdrop);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 999px;
+            padding: 0.5rem 1.5rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .search-box:focus-within {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            color: var(--text-color);
+            font-size: 1rem;
+            width: 200px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--gradient-main);
+            color: white;
+            font-weight: 600;
+            padding: 0.85rem 1.75rem;
+            border-radius: 999px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+            color: white;
+            opacity: 0.95;
+        }
+        
+        .button.secondary {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            box-shadow: none;
+        }
+        
+        .button.secondary:hover {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary-color);
+            box-shadow: none;
+        }
+        
+        /* Interactive Widget Glow */
+        .glowing-widget {
+            position: relative;
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            margin: 3rem 0;
+            z-index: 1;
+        }
+        
+        .glowing-widget::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: var(--gradient-main);
+            z-index: -1;
+            border-radius: calc(var(--radius-lg) + 2px);
+            opacity: 0.4;
+            filter: blur(12px);
+            transition: opacity 0.3s ease, filter 0.3s ease;
+        }
+        
+        .glowing-widget:hover::before {
+            opacity: 0.75;
+            filter: blur(16px);
+        }
+
+
+    </style>
+    
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <a href="/" class="brand">
+            <svg viewBox="0 0 24 24">
+                <defs>
+                    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:var(--primary-color);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:var(--secondary-color);stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Thermometer icon -->
+                <path d="M12 2a3 3 0 0 0-3 3v9.55a4 4 0 1 0 6 0V5a3 3 0 0 0-3-3zm1 14.5a2 2 0 1 1-2-2 1 1 0 0 0 1-1V5a1 1 0 1 1 2 0v10a1 1 0 0 0 1 1 2 2 0 0 1-2 2z"/>
+            </svg>
+            Celsius Fahrenheit Converter Tools
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                
+                <li style="position: relative;" class="dropdown">
+                    <a href="#" style="cursor: default;">Categories ▼</a>
+                    <ul class="dropdown-menu" style="display: none; position: absolute; top: 100%; left: 0; background: var(--card-bg); backdrop-filter: var(--backdrop); -webkit-backdrop-filter: var(--backdrop); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--shadow-lg); min-width: 200px; z-index: 1001; flex-direction: column; gap: 0.75rem;">
+                        
+                        <li><a href="/sub-zero.html" style="font-weight: 500;">Sub-Zero</a></li>
+                        
+                        <li><a href="/cool-mild.html" style="font-weight: 500;">Cool & Mild</a></li>
+                        
+                        <li><a href="/warm-hot.html" style="font-weight: 500;">Warm & Hot</a></li>
+                        
+                        <li><a href="/extreme-heat.html" style="font-weight: 500;">Extreme Heat</a></li>
+                        
+                    </ul>
+                </li>
+                
+                <li><a href="/search.html">Search</a></li>
+            </ul>
+        </nav>
+        
+        <script>
+            // Simple dropdown toggle for click/hover
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            if(dropdown && dropdownMenu) {
+                dropdown.addEventListener('mouseenter', () => dropdownMenu.style.display = 'flex');
+                dropdown.addEventListener('mouseleave', () => dropdownMenu.style.display = 'none');
+            }
+        </script>
+    </div>
+</header>
+
+<div class="container">
+    <main>
+        <section class="content">
+            
+<nav aria-label="breadcrumb" style="margin-bottom: 2rem;">
+    <ol style="list-style: none; padding: 0; display: flex; gap: 0.5rem; font-size: 0.9rem; color: #64748b;">
+        <li><a href="/">Home</a></li>
+        <li>/</li>
+        <li style="color: var(--text-color);" aria-current="page">Extreme Heat</li>
+    </ol>
+</nav>
+
+<h1>Extreme Heat Conversions</h1>
+<p style="font-size: 1.1rem; margin-bottom: 2rem;">Select a conversion below to see the exact formula, history, and real-time interactive tools.</p>
+
+<div class="article-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem;">
+    
+    <a href="/convert-40-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">40 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 40°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-41-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">41 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 41°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-42-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">42 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 42°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-43-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">43 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 43°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-44-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">44 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 44°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-45-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">45 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 45°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-46-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">46 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 46°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-47-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">47 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 47°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-48-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">48 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 48°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-49-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">49 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 49°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-50-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">50 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 50°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-51-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">51 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 51°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-52-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">52 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 52°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-53-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">53 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 53°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-54-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">54 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 54°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-55-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">55 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 55°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-56-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">56 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 56°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-57-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">57 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 57°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-58-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">58 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 58°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-59-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">59 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 59°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-60-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">60 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 60°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-61-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">61 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 61°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-62-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">62 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 62°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-63-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">63 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 63°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-64-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">64 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 64°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-65-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">65 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 65°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-66-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">66 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 66°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-67-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">67 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 67°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-68-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">68 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 68°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-69-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">69 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 69°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-70-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">70 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 70°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-71-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">71 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 71°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-72-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">72 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 72°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-73-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">73 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 73°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-74-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">74 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 74°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-75-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">75 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 75°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-76-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">76 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 76°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-77-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">77 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 77°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-78-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">78 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 78°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-79-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">79 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 79°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-80-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">80 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 80°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-81-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">81 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 81°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-82-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">82 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 82°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-83-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">83 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 83°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-84-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">84 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 84°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-85-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">85 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 85°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-86-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">86 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 86°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-87-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">87 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 87°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-88-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">88 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 88°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-89-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">89 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 89°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-90-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">90 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 90°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-91-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">91 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 91°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-92-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">92 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 92°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-93-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">93 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 93°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-94-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">94 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 94°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-95-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">95 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 95°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-96-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">96 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 96°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-97-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">97 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 97°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-98-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">98 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 98°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-99-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">99 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 99°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-100-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">100 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 100°C to Fahrenheit</p>
+    </a>
+    
+    <a href="/convert-105-celsius-to-fahrenheit.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">105 Celsius to Fahrenheit Conversion</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert 105°C to Fahrenheit</p>
+    </a>
+    
+</div>
+
+<!-- Schema Markup for Category List -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-40-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-41-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-42-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-43-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-44-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-45-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-46-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-47-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-48-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-49-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-50-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-51-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-52-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-53-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-54-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-55-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-56-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-57-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-58-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-59-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-60-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-61-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-62-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-63-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-64-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-65-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-66-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-67-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-68-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-69-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 31,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-70-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 32,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-71-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 33,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-72-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 34,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-73-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 35,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-74-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 36,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-75-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 37,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-76-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 38,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-77-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 39,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-78-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 40,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-79-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 41,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-80-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 42,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-81-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 43,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-82-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 44,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-83-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 45,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-84-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 46,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-85-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 47,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-86-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 48,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-87-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 49,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-88-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 50,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-89-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 51,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-90-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 52,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-91-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 53,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-92-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 54,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-93-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 55,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-94-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 56,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-95-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 57,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-96-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 58,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-97-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 59,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-98-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 60,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-99-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 61,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-100-celsius-to-fahrenheit.html"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 62,
+      "url": "https://celsius-fahrenheit-converter-no.bongshai.com/convert-105-celsius-to-fahrenheit.html"
+    }
+    
+  ]
+}
+</script>
+
+        </section>
+        
+        <aside class="sidebar">
+            <div class="sticky-widget">
+                <h3>About Us</h3>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">We provide fast and reliable temperature conversion tools designed for everyday use. No sign-ups required!</p>
+
+<!-- Google AdSense - In-Article -->
+<div class="ad-placeholder" style="margin: 20px 0; text-align: center;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-0000000000000000" data-ad-slot="0000000000"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+                
+
+
+
+<!-- Google AdSense - In-Article -->
+<div class="ad-placeholder" style="margin: 20px 0; text-align: center;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-0000000000000000" data-ad-slot="0000000000"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+
+            </div>
+            
+            <div class="ad-zone skyscraper">
+                [AdSense Sidebar Unit]
+            </div>
+        </aside>
+    </main>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Celsius Fahrenheit Converter Tools. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+            <a href="/contact.html">Contact Us</a>
+        </div>
+        <div style="margin-top: 1rem; font-size: 0.8rem; color: #94a3b8;">
+            Visits: <span id="visitor-counter">Loading...</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Simple mock visitor counter script
+    document.addEventListener("DOMContentLoaded", function() {
+        let count = localStorage.getItem("visit_count") || 14000;
+        count = parseInt(count) + Math.floor(Math.random() * 5);
+        localStorage.setItem("visit_count", count);
+        document.getElementById("visitor-counter").innerText = count.toLocaleString();
+    });
+    
+    // PWA Service Worker Registration
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').then(registration => {
+                console.log('SW registered: ', registration);
+            }).catch(registrationError => {
+                console.log('SW registration failed: ', registrationError);
+            });
+        });
+    }
+</script>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: var(--card-bg); border-top: 1px solid var(--border-color); padding: 1rem; display: flex; justify-content: space-between; align-items: center; z-index: 9999; box-shadow: 0 -4px 10px rgba(0,0,0,0.1); display: none;">
+    <div style="font-size: 0.9rem;">
+        We use cookies to personalize content and ads, to provide social media features, and to analyze our traffic. We also share information about your use of our site with our advertising and analytics partners. By clicking "Accept", you consent to our use of cookies. <a href="/privacy-policy.html">Read our Privacy Policy</a>.
+    </div>
+    <div style="margin-left: 1rem;">
+        <button id="accept-cookies" class="button" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Accept</button>
+    </div>
+</div>
+<script>
+    if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').style.display = 'flex';
+    }
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+    });
+</script>
+
+
+</body>
+</html>

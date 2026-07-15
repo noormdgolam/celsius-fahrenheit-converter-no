@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}{{ category.name }} Conversions | {{ site.name }}{% endblock %}
+{% block description %}Browse all {{ category.name.lower() }} conversion tables and interactive tools.{% endblock %}
+
+{% block canonical_url %}/{{ category.slug }}.html{% endblock %}
+{% block og_url %}/{{ category.slug }}.html{% endblock %}
+{% block og_title %}{{ category.name }} Conversions | {{ site.name }}{% endblock %}
+{% block og_description %}Browse all {{ category.name.lower() }} conversion tables and interactive tools.{% endblock %}
+{% block tw_title %}{{ category.name }} Conversions | {{ site.name }}{% endblock %}
+{% block tw_description %}Browse all {{ category.name.lower() }} conversion tables and interactive tools.{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb" style="margin-bottom: 2rem;">
+    <ol style="list-style: none; padding: 0; display: flex; gap: 0.5rem; font-size: 0.9rem; color: #64748b;">
+        <li><a href="/">Home</a></li>
+        <li>/</li>
+        <li style="color: var(--text-color);" aria-current="page">{{ category.name }}</li>
+    </ol>
+</nav>
+
+<h1>{{ category.name }} Conversions</h1>
+<p style="font-size: 1.1rem; margin-bottom: 2rem;">Select a conversion below to see the exact formula, history, and real-time interactive tools.</p>
+
+<div class="article-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem;">
+    {% for article in articles %}
+    <a href="/{{ article.slug }}.html" style="display: block; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-decoration: none; color: var(--text-color); transition: all 0.2s ease;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--primary-color);">{{ article.title }}</h3>
+        <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Convert {{ article.c }}°C to Fahrenheit</p>
+    </a>
+    {% endfor %}
+</div>
+
+<!-- Schema Markup for Category List -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {% for article in articles %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "url": "{{ site.url }}/{{ article.slug }}.html"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endblock %}

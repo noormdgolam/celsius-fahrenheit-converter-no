@@ -32,6 +32,16 @@ def get_random_date():
     dt = start_date + timedelta(days=random_days)
     return dt.strftime('%B %d, %Y'), dt.strftime('%Y-%m-%d')
 
+def get_category(c):
+    if c < 0:
+        return {"slug": "sub-zero", "name": "Sub-Zero"}
+    elif c < 20:
+        return {"slug": "cool-mild", "name": "Cool & Mild"}
+    elif c < 40:
+        return {"slug": "warm-hot", "name": "Warm & Hot"}
+    else:
+        return {"slug": "extreme-heat", "name": "Extreme Heat"}
+
 widget_html = """
 <div class="glowing-widget">
     <h3 style="margin-top: 0; margin-bottom: 1rem; color: var(--primary-color);">Interactive Temperature Converter</h3>
@@ -229,7 +239,8 @@ for c in temps_c:
 
     articles.append({
         "title": f"{c} Celsius to Fahrenheit Conversion",
-        "slug": f"convert-{str(c).replace('.', '-')}-celsius-to-fahrenheit",
+        "slug": f"convert-{c}-celsius-to-fahrenheit".replace('.', '-').replace('--', '-'),
+        "category": get_category(c),
         "c": c,
         "f": f,
         "body": body_text,

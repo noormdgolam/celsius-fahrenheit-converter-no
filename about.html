@@ -390,9 +390,35 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
+                
+                <li style="position: relative;" class="dropdown">
+                    <a href="#" style="cursor: default;">Categories ▼</a>
+                    <ul class="dropdown-menu" style="display: none; position: absolute; top: 100%; left: 0; background: var(--card-bg); backdrop-filter: var(--backdrop); -webkit-backdrop-filter: var(--backdrop); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--shadow-lg); min-width: 200px; z-index: 1001; flex-direction: column; gap: 0.75rem;">
+                        
+                        <li><a href="/sub-zero.html" style="font-weight: 500;">Sub-Zero</a></li>
+                        
+                        <li><a href="/cool-mild.html" style="font-weight: 500;">Cool & Mild</a></li>
+                        
+                        <li><a href="/warm-hot.html" style="font-weight: 500;">Warm & Hot</a></li>
+                        
+                        <li><a href="/extreme-heat.html" style="font-weight: 500;">Extreme Heat</a></li>
+                        
+                    </ul>
+                </li>
+                
                 <li><a href="/search.html">Search</a></li>
             </ul>
         </nav>
+        
+        <script>
+            // Simple dropdown toggle for click/hover
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            if(dropdown && dropdownMenu) {
+                dropdown.addEventListener('mouseenter', () => dropdownMenu.style.display = 'flex');
+                dropdown.addEventListener('mouseleave', () => dropdownMenu.style.display = 'none');
+            }
+        </script>
     </div>
 </header>
 

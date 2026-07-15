@@ -21,25 +21,43 @@ def main():
     env = Environment(loader=FileSystemLoader(TPL_DIR))
     
     print("Generating articles...")
-    article_tpl = env.get_template("article.html")
+    article_tpl = env.get_template('article.html')
     
-    # Generate random related articles for each
-    for article in articles:
-        related = random.sample([a for a in articles if a != article], 3)
-        html = article_tpl.render(site=site, article=article, articles=articles, related=related)
-        out_path = os.path.join(ROOT_DIR, f"{article['slug']}.html")
-        with open(out_path, 'w', encoding='utf-8') as f:
+    # Extract distinct categories from articles
+    categories_dict = {}
+    for a in articles:
+        if 'category' in a and a['category']['slug'] not in categories_dict:
+            categories_dict[a['category']['slug']] = a['category']
+    categories = list(categories_dict.values())
+    
+    for i, article in enumerate(articles):
+        related = [a for a in articles if a['slug'] != article['slug']]
+        random.shuffle(related)
+        related = related[:5]
+        
+        html = article_tpl.render(site=site, article=article, articles=articles, related=related, categories=categories)
+        with open(os.path.join(ROOT_DIR, f"{article['slug']}.html"), 'w', encoding='utf-8') as f:
+            f.write(html)
+            
+    print("Generating category pages...")
+    category_tpl = env.get_template('category.html')
+    for cat in categories:
+        cat_articles = [a for a in articles if 'category' in a and a['category']['slug'] == cat['slug']]
+        html = category_tpl.render(site=site, category=cat, articles=cat_articles, categories=categories)
+        with open(os.path.join(ROOT_DIR, f"{cat['slug']}.html"), 'w', encoding='utf-8') as f:
             f.write(html)
 
     print("Generating index.html...")
-    index_tpl = env.get_template("index.html")
+    index_tpl = env.get_template('index.html')
+    html = index_tpl.render(site=site, articles=articles, categories=categories)
     with open(os.path.join(ROOT_DIR, "index.html"), 'w', encoding='utf-8') as f:
-        f.write(index_tpl.render(site=site, articles=articles))
+        f.write(html)
 
     print("Generating search.html...")
-    search_tpl = env.get_template("search.html")
+    search_tpl = env.get_template('search.html')
+    html = search_tpl.render(site=site, articles=articles, categories=categories)
     with open(os.path.join(ROOT_DIR, "search.html"), 'w', encoding='utf-8') as f:
-        f.write(search_tpl.render(site=site))
+        f.write(html)
 
     print("Generating search_index.json...")
     search_index = []
@@ -53,7 +71,7 @@ def main():
         json.dump(search_index, f, indent=2)
 
     print("Generating legal pages...")
-    legal_tpl = env.get_template("legal.html")
+    legal_tpl = env.get_template('legal.html')
     
     legal_pages = [
         {
@@ -89,7 +107,7 @@ def main():
     ]
     
     for page in legal_pages:
-        html = legal_tpl.render(site=site, title=page['title'], description=page['description'], slug=page['slug'], content=page['content'])
+        html = legal_tpl.render(site=site, title=page['title'], description=page['description'], slug=page['slug'], content=page['content'], categories=categories)
         with open(os.path.join(ROOT_DIR, f"{page['slug']}.html"), 'w', encoding='utf-8') as f:
             f.write(html)
 
@@ -99,6 +117,8 @@ def main():
     # Add home and search and legal
     for page in ["", "search.html", "privacy-policy.html", "terms.html", "disclaimer.html", "contact.html", "about.html"]:
         sitemap += f"  <url>\n    <loc>{site['url']}/{page}</loc>\n    <lastmod>{date_str}</lastmod>\n  </url>\n"
+    for cat in categories:
+        sitemap += f"  <url>\n    <loc>{site['url']}/{cat['slug']}.html</loc>\n    <lastmod>{date_str}</lastmod>\n  </url>\n"
     for a in articles:
         sitemap += f"  <url>\n    <loc>{site['url']}/{a['slug']}.html</loc>\n    <lastmod>{date_str}</lastmod>\n  </url>\n"
     sitemap += "</urlset>"
