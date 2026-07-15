@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} | {{ site.name }}{% endblock %}
+{% block description %}{{ description }}{% endblock %}
+{% block canonical_url %}/{{ slug }}.html{% endblock %}
+{% block og_title %}{{ title }}{% endblock %}
+{% block og_description %}{{ description }}{% endblock %}
+{% block og_url %}/{{ slug }}.html{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block tw_title %}{{ title }}{% endblock %}
+{% block tw_description %}{{ description }}{% endblock %}
+
+{% block content %}
+<article style="max-width: 800px; margin: 0 auto; background: var(--card-bg); padding: 3rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+    <header style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+        <h1 style="font-size: 2.25rem; color: var(--primary-color);">{{ title }}</h1>
+        <p style="color: #64748b;">Last Updated: July 15, 2026</p>
+    </header>
+    <div style="line-height: 1.8; font-size: 1.1rem; color: var(--text-color);">
+        {{ content | safe }}
+    </div>
+</article>
+{% endblock %}

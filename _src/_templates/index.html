@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero" style="text-align: center; margin-bottom: 3rem;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Instant Celsius to Fahrenheit Converter</h1>
+    <p style="font-size: 1.125rem; color: var(--text-color); opacity: 0.8; max-width: 600px; margin: 0 auto;">
+        No sign-up. No hassle. Convert temperatures instantly with our fast and free online tool.
+    </p>
+
+<!-- Google AdSense - In-Article -->
+<div class="ad-placeholder" style="margin: 20px 0; text-align: center;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-0000000000000000" data-ad-slot="0000000000"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+
+</div>
+
+<div class="converter-box" style="background: var(--bg-color); border: 2px solid var(--border-color); border-radius: var(--radius-lg); padding: 2.5rem; text-align: center; margin-bottom: 3rem; box-shadow: var(--shadow-sm);">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; max-width: 400px; margin: 0 auto;">
+        <div style="width: 100%; text-align: left;">
+            <label for="celsius-input" style="font-weight: 600; margin-bottom: 0.5rem; display: block;">Celsius (°C)</label>
+            <input type="number" id="celsius-input" placeholder="e.g. 20" style="width: 100%; padding: 1rem; font-size: 1.25rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--card-bg); color: var(--text-color);">
+        </div>
+        
+        <div style="font-size: 1.5rem; color: var(--primary-color);">
+            <svg style="width: 24px; height: 24px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L15.17 11H4v2h11.17l-4.58 4.59L12 20l8-8z"/></svg>
+            <br>
+            <svg style="width: 24px; height: 24px; fill: currentColor; transform: rotate(180deg);" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L15.17 11H4v2h11.17l-4.58 4.59L12 20l8-8z"/></svg>
+        </div>
+
+        <div style="width: 100%; text-align: left;">
+            <label for="fahrenheit-input" style="font-weight: 600; margin-bottom: 0.5rem; display: block;">Fahrenheit (°F)</label>
+            <input type="number" id="fahrenheit-input" placeholder="e.g. 68" style="width: 100%; padding: 1rem; font-size: 1.25rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--card-bg); color: var(--text-color);">
+        </div>
+    </div>
+</div>
+
+<div class="ad-zone rectangle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-ad-client="ca-pub-0000000000000000" data-ad-slot="0000000000"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="popular-conversions" style="margin-top: 3rem;">
+    <h2>Popular Conversions</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
+        {% for article in articles[:12] %}
+        <a href="/{{ article.slug }}.html" class="conversion-card" style="display: block; padding: 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: var(--radius-md); text-align: center; font-weight: 600;">
+            {{ article.c }}°C to {{ article.f }}°F
+        </a>
+        {% endfor %}
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="/search.html" class="button secondary">View All Conversions</a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    const celsiusInput = document.getElementById('celsius-input');
+    const fahrenheitInput = document.getElementById('fahrenheit-input');
+
+    celsiusInput.addEventListener('input', function(e) {
+        let c = parseFloat(e.target.value);
+        if (!isNaN(c)) {
+            let f = (c * 9/5) + 32;
+            fahrenheitInput.value = f.toFixed(2);
+        } else {
+            fahrenheitInput.value = '';
+        }
+    });
+
+    fahrenheitInput.addEventListener('input', function(e) {
+        let f = parseFloat(e.target.value);
+        if (!isNaN(f)) {
+            let c = (f - 32) * 5/9;
+            celsiusInput.value = c.toFixed(2);
+        } else {
+            celsiusInput.value = '';
+        }
+    });
+</script>
+{% endblock %}

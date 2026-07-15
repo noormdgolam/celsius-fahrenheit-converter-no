@@ -1,0 +1,21 @@
+{
+  "name": "Celsius Fahrenheit Converter Tools",
+  "short_name": "C to F",
+  "description": "Fast and easy Celsius to Fahrenheit converter. No sign-up required. Convert temperatures instantly with our free online tool.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#1e1e2f",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

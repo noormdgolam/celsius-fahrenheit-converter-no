@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://celsius-fahrenheit-converter-no.bongshai.com/sitemap.xml

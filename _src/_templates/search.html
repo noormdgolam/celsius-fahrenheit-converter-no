@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}Search | {{ site.name }}{% endblock %}
+{% block description %}Search for specific temperature conversions on our site.{% endblock %}
+
+{% block content %}
+<div class="search-container">
+    <h1>Search Conversions</h1>
+    <div style="margin: 2rem 0;">
+        <input type="text" id="search-input" placeholder="Type a temperature (e.g., 20 or freezing)..." style="width: 100%; max-width: 500px; padding: 1rem 1.5rem; font-size: 1.125rem; border: 2px solid var(--border-color); border-radius: 999px; outline: none; background: var(--bg-color); color: var(--text-color);">
+    </div>
+    
+    <div id="search-results" style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem;">
+        <!-- Results will appear here -->
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const input = document.getElementById('search-input');
+        const resultsContainer = document.getElementById('search-results');
+        let index = [];
+        
+        // Fetch the search index
+        fetch('/search_index.json')
+            .then(res => res.json())
+            .then(data => {
+                index = data;
+                
+                // Check URL params for initial query
+                const params = new URLSearchParams(window.location.search);
+                const q = params.get('q');
+                if (q) {
+                    input.value = q;
+                    performSearch(q);
+                }
+            });
+
+        input.addEventListener('input', (e) => {
+            performSearch(e.target.value);
+        });
+
+        function performSearch(query) {
+            query = query.toLowerCase().trim();
+            resultsContainer.innerHTML = '';
+            
+            if (!query) return;
+            
+            const results = index.filter(item => 
+                item.title.toLowerCase().includes(query) || 
+                item.description.toLowerCase().includes(query)
+            ).slice(0, 20); // Limit to 20 results
+            
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<p>No results found for "' + query + '". Try searching for a specific number like "100" or "freezing".</p>
+
+<!-- Google AdSense - In-Article -->
+<div class="ad-placeholder" style="margin: 20px 0; text-align: center;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-0000000000000000" data-ad-slot="0000000000"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+
+
+<!-- Google AdSense - In-Article -->
+<div class="ad-placeholder" style="margin: 20px 0; text-align: center;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-0000000000000000" data-ad-slot="0000000000"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+';
+                return;
+            }
+            
+            results.forEach(item => {
+                const div = document.createElement('a');
+                div.href = '/' + item.slug + '.html';
+                div.style.display = 'block';
+                div.style.padding = '1.5rem';
+                div.style.background = 'var(--bg-color)';
+                div.style.border = '1px solid var(--border-color)';
+                div.style.borderRadius = 'var(--radius-md)';
+                div.style.textDecoration = 'none';
+                
+                div.innerHTML = `
+                    <h3 style="margin-top: 0; color: var(--primary-color);">${item.title}</h3>
+                    <p style="margin-bottom: 0; color: var(--text-color); opacity: 0.8;">${item.description}</p>
+                `;
+                
+                resultsContainer.appendChild(div);
+            });
+        }
+    });
+</script>
+{% endblock %}
